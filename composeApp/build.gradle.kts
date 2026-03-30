@@ -52,6 +52,8 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
 
+            implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.10.0")
+
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}")
             implementation("io.ktor:ktor-client-core:${ktorVersion}")
             implementation("io.ktor:ktor-client-content-negotiation:${ktorVersion}")
@@ -98,5 +100,19 @@ android {
 
 dependencies {
     debugImplementation(libs.compose.uiTooling)
+
+
+    val koinComposeVersion = "4.2.0"
+    val coilVersion = "2.7.0"
+    val accompanistVersion = "0.36.0"
+    val navVersion = "2.9.7"
+
+    implementation("io.insert-koin:koin-androidx-compose:$koinComposeVersion")
+    implementation("io.coil-kt:coil-compose:$coilVersion")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:$accompanistVersion")
+    implementation("androidx.navigation:navigation-compose:$navVersion")
+
+
+
 }
 
